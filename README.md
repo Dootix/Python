@@ -1,1 +1,1 @@
-Scripts, tools written in Python.
+Simple cybersec scripts/tools written in Python.
