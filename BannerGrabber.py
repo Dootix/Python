@@ -2,7 +2,7 @@
 # ************************
 #
 # Simple banner grabber for FTP, SMTP and MySQL.
-#
+# By Dootix
 # ************************
 # ////////////////////////
 
@@ -22,7 +22,7 @@ def banner_grabber(IP, port):
             s.settimeout(2)
             answer = s.recv(1024)
             s.close()
-            print(answer)
+            print(f'{answer}')
             
         except:
             return 'ERROR'
@@ -31,7 +31,7 @@ def banner_grabber(IP, port):
     
 def main():
     
-    IP = input('Please provide IP of the target: ')
-    banner_grabber(IP, PORTS)
+    ip = input(f'Please provide IP of the target: ')
+    banner_grabber(ip, PORTS)
 
 main()
