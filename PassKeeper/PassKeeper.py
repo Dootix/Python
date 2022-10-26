@@ -13,7 +13,7 @@ def password_validator(pw):
     # Opening a file with common passwords that should not be allowed.
     with open('common.txt', 'r') as passlist:
         
-        # Checking if password is shorter than 8 chars and if password is on the common passwords list. 
+        # Checking if password is shorter than 8 chars or if password is on the common passwords list. 
         if len(pw) < 8 or pw in passlist == True: 
             pw = str(input(f'[X] Password {pw} is too short (minimum 8 characters) or forbidden. Please enter a new password >> '))
             
