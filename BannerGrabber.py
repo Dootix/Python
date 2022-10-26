@@ -10,7 +10,7 @@ import socket
 
 PORTS = [21,25,3306]
 
-def banner_grabber(IP, port):
+def banner_grabber(ip, port):
     
     for i in range(0,3):
         
