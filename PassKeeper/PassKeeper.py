@@ -33,7 +33,7 @@ def password_validator(pw):
                     # Checking if password has at least one uppercase.
                     if bool(re.match(r'\w*[A-Z]\w*', pw)):
                         print(f'[V] Uppercase found!')                   
-                        print(f'Great! Your password meets all the criteria -> (minimum 8 characters/has special characters/is not common).')
+                        print(f'Great! Your password meets all the criteria -> (minimum 8 characters/has special characters/is not common/has uppercase).')
 
                     else:
                         print(f'[X] Your password does not contain uppercase.')
